@@ -1,26 +1,18 @@
-INSERT INTO clients VALUES
-(1, 'John', 'Doe', 'john.doe@example.com'),
-(2, 'Jane', 'Smith', 'jane.smith@example.com'),
-(3, 'Alice', 'Johnson', 'alice.johnson@example.com');
+INSERT INTO simplebank.clients VALUES
+(0, 'Peter', 'Parker', 'neighborhoodfriend@marvel.com', 'active'),
+(0, 'John', 'Savage', 'plentyoftime@savage.com', 'active'),
+(0, 'Charles', 'Darwin', 's2science@species.com', 'active'),
+(0, 'Tony', 'Stark', 'ironman@rich.com', 'inactive');
 
-INSERT INTO accounts VALUES
-(1, 1, 1000.00),
-(2, 1, 5000.00),
-(3, 2, 2000.00),
-(4, 3, 3000.00);
+INSERT INTO simplebank.accounts VALUES
+(0, 1001, 1, 1000.0),
+(0, 1002, 2, 10.0),
+(0, 1003, 2, 700.0),
+(0, 1004, 3, 100.0),
+(0, 1005, 3, 51000.0),
+(0, 1006, 3, 1780.0),
+(0, 1007, 4, 1000000.0);
 
-INSERT INTO transactions VALUES
-(1, 1, 'debit', 100.00, 'open'),
-(2, 2, 'credit', 200.00, 'processing'),
-(3, 3, 'debit', 50.00, 'finalized'),
-(4, 4, 'credit', 150.00, 'open');
-
-INSERT INTO transaction_status_changes VALUES
-(1, 1, NULL, 'open'),
-(2, 1, 'open', 'processing'),
-(3, 1, 'processing', 'finalized'),
-(4, 2, NULL, 'open'),
-(5, 2, 'open', 'processing'),
-(6, 3, NULL, 'open'),
-(7, 3, 'open', 'finalized'),
-(8, 4, NULL, 'open');
+INSERT INTO simplebank.transactions VALUES
+(0, 1, 2, 'debit', 'open', CURRENT_TIMESTAMP(6), 10.0),
+(0, 1, 2, 'debit', 'processing', CURRENT_TIMESTAMP(6), 10.0);

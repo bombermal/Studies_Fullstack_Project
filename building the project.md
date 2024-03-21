@@ -42,6 +42,15 @@ Before starting the project I need to define some rules that will guide me throu
 
 ### 2.2 - API
 
+Download [API Platform](https://github.com/api-platform/api-platform/releases/tag/v3.2.16) source code.
+
+run the following commands:
+
+```bash
+docker compose build --no-cache
+docker compose up -d
+```
+
 &vellip;
 
 ### 2.3 - Backend
@@ -57,3 +66,5 @@ Before starting the project I need to define some rules that will guide me throu
 Database design and creation.
 
 Based on the rules defined in the previous section, I created this diagram:
+
+![Database Diagram](doc_images/database_diagram.png)
