@@ -41,3 +41,19 @@ Before starting the project I need to define some rules that will guide me throu
     - Status
 
 ### 2.2 - API
+
+&vellip;
+
+### 2.3 - Backend
+
+&vellip;
+
+### 2.4 - Frontend
+
+&vellip;
+
+## 3. Database
+
+Database design and creation.
+
+Based on the rules defined in the previous section, I created this diagram:
