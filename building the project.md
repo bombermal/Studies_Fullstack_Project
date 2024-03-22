@@ -47,6 +47,12 @@ Download [API Platform](https://github.com/api-platform/api-platform/releases/ta
 run the following commands:
 
 ```bash
+sudo apt install apache2
+sudo apt install symfony-cli
+sudo apt install php8.3-xml
+sudo apt install nodejs
+sudo apt install npm
+
 docker compose build --no-cache
 docker compose up -d
 ```
