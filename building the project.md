@@ -47,12 +47,6 @@ Download [API Platform](https://github.com/api-platform/api-platform/releases/ta
 run the following commands:
 
 ```bash
-sudo apt install apache2
-sudo apt install symfony-cli
-sudo apt install php8.3-xml
-sudo apt install nodejs
-sudo apt install npm
-
 docker compose build --no-cache
 docker compose up -d
 ```
@@ -61,6 +55,20 @@ docker compose up -d
 
 ### 2.3 - Backend
 
+1 - Install [Docker](https://docs.docker.com/engine/install/ubuntu/)
+2 - Install [PHP](https://www.digitalocean.com/community/tutorials/how-to-install-php-8-1-and-set-up-a-local-development-environment-on-ubuntu-22-04)
+3 - Install Apache, nodejs, npm and other components:
+```bash
+sudo apt install apache2 nodejs npm apt-transport-https
+sudo apt-get install -y php8.1-cli php8.1-common php8.1-mysql php8.1-zip php8.1-gd php8.1-mbstring php8.1-curl php8.1-xml php8.1-bcmath php8.1-pgsql libapache2-mod-php8.1 php8.1-intl
+sudo systemctl restart apache2
+```
+4 - Install [Composer](https://getcomposer.org/download/)
+5 - Install [Symfony](https://symfony.com/download)
+6 - Start a new project
+```bash
+symfony new --version=6.2 --webapp --docker --dir=simplebank
+```
 &vellip;
 
 ### 2.4 - Frontend
