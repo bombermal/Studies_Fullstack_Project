@@ -2,45 +2,60 @@
 
 namespace App\Controller\Admin;
 
+// Entity
+use App\Entity\Account;
+use App\Entity\Client;
+use App\Entity\Transaction;
+
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
+use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * This class represents the dashboard controller for the admin section.
+ */
 class DashboardController extends AbstractDashboardController
 {
+    /**
+     * Renders the index page of the admin dashboard.
+     *
+     * @return Response The response object.
+     */
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
-        return parent::index();
-
-        // Option 1. You can make your dashboard redirect to some common page of your backend
-        //
-        // $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
-        // return $this->redirect($adminUrlGenerator->setController(OneOfYourCrudController::class)->generateUrl());
-
-        // Option 2. You can make your dashboard redirect to different pages depending on the user
-        //
-        // if ('jane' === $this->getUser()->getUsername()) {
-        //     return $this->redirect('...');
-        // }
-
-        // Option 3. You can render some custom template to display a proper dashboard with widgets, etc.
-        // (tip: it's easier if your template extends from @EasyAdmin/page/content.html.twig)
-        //
-        // return $this->render('some/path/my-dashboard.html.twig');
+        $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
+        $url = $adminUrlGenerator->setController(ClientCrudController::class)->generateUrl();
+        return $this->redirect($url);
+        
     }
 
+    /**
+     * Configures the dashboard settings.
+     *
+     * @return Dashboard The configured dashboard object.
+     */
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Symfony Back');
+            ->setTitle('Simplebank Admin')
+            ->setFaviconPath('images/icon.jpg')
+            ;
     }
 
+    /**
+     * Configures the menu items for the dashboard.
+     *
+     * @return iterable The menu items.
+     */
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
-        // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
+        yield MenuItem::linktoRoute('Home', 'fas fa-home', 'app_home');
+        yield MenuItem::linkToCrud('Clients', 'fas fa-users', Client::class)->setDefaultSort(['id' => 'ASC']);
+        yield MenuItem::linkToCrud('Accounts', 'far fa-address-card', Account::class);
+        yield MenuItem::linkToCrud('Transactions', 'fab fa-btc', Transaction::class);
     }
 }

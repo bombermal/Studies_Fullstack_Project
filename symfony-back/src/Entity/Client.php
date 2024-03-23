@@ -32,6 +32,11 @@ class Client
         $this->account_number = new ArrayCollection();
     }
 
+    public function __toString(): string
+    {
+        return $this->name . ' ' . $this->last_name;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
