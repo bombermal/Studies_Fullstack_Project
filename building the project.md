@@ -7,10 +7,10 @@ This document represents my thinking process and the steps I took to build the p
 This project consists in a single page application that represents a bank page. The page will have a login form, a list of transactions and a balance. The transactions will be fetched from an API and the balance will be calculated based on the transactions.
 
 Must contain:
-1 - A database ( Mysql )
-2 - An API ( API-Platform)
-3 - A backend ( Sympfony )
-4 - A frontend ( Angular )
+1. A database ( Mysql )
+2. An API ( API-Platform)
+3. A backend ( Sympfony )
+4. A frontend ( Angular )
 
 
 ## 2. Rules
