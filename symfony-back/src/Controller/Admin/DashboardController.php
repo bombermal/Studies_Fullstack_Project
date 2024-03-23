@@ -56,6 +56,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linktoRoute('Home', 'fas fa-home', 'app_home');
         yield MenuItem::linkToCrud('Clients', 'fas fa-users', Client::class)->setDefaultSort(['id' => 'ASC']);
         yield MenuItem::linkToCrud('Accounts', 'far fa-address-card', Account::class);
-        yield MenuItem::linkToCrud('Transactions', 'fab fa-btc', Transaction::class);
+        yield MenuItem::linkToCrud('Transactions', 'fas fa-coins', Transaction::class);
+        yield MenuItem::linkToCrud('Transaction History', 'fas fa-balance-scale-left', Transaction::class);
     }
 }
