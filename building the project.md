@@ -55,21 +55,19 @@ docker compose up -d
 
 ### 2.3 - Backend
 
-1 - Install [Docker](https://docs.docker.com/engine/install/ubuntu/)
-2 - Install [PHP](https://www.digitalocean.com/community/tutorials/how-to-install-php-8-1-and-set-up-a-local-development-environment-on-ubuntu-22-04)
-3 - Install Apache, nodejs, npm and other components:
+1. Install [Docker](https://docs.docker.com/engine/install/ubuntu/)
+2. Install Apache
 ```bash
-sudo apt install apache2 nodejs npm apt-transport-https
-sudo apt-get install -y php8.1-cli php8.1-common php8.1-mysql php8.1-zip php8.1-gd php8.1-mbstring php8.1-curl php8.1-xml php8.1-bcmath php8.1-pgsql libapache2-mod-php8.1 php8.1-intl
-sudo systemctl restart apache2
+sudo apt install apache2
 ```
-4 - Install [Composer](https://getcomposer.org/download/)
-5 - Install [Symfony](https://symfony.com/download)
-6 - Start a new project
+3. Install [PHP](https://php.watch/articles/php-8.3-install-upgrade-on-debian-ubuntu#php83-ubuntu-quick)
+4. Install [nodejs and npm](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04)
+5. Install [Composer](https://getcomposer.org/download/)
+6. Install [Symfony](https://symfony.com/download)
+7. Start a new project
 ```bash
-symfony new --version=6.2 --webapp --docker --dir=simplebank
+symfony new symfony --version=7.* --webapp --docker 
 ```
-&vellip;
 
 ### 2.4 - Frontend
 
