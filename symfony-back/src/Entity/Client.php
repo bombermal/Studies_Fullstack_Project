@@ -34,7 +34,7 @@ class Client
 
     public function __toString(): string
     {
-        return $this->name . ' ' . $this->last_name;
+        return $this->id . ' - ' . $this->name . ' ' . $this->last_name;
     }
 
     public function getId(): ?int
