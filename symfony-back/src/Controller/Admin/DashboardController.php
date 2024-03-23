@@ -6,6 +6,7 @@ namespace App\Controller\Admin;
 use App\Entity\Account;
 use App\Entity\Client;
 use App\Entity\Transaction;
+use App\Entity\Transactionhistory;
 
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -57,6 +58,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Clients', 'fas fa-users', Client::class)->setDefaultSort(['id' => 'ASC']);
         yield MenuItem::linkToCrud('Accounts', 'far fa-address-card', Account::class);
         yield MenuItem::linkToCrud('Transactions', 'fas fa-coins', Transaction::class);
-        yield MenuItem::linkToCrud('Transaction History', 'fas fa-balance-scale-left', Transaction::class);
+        yield MenuItem::linkToCrud('Transaction History', 'fas fa-balance-scale-left', Transactionhistory::class);
     }
 }
