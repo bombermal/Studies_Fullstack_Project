@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 *{
     margin: 0px;
     padding: 0px; 
@@ -7,7 +8,9 @@
     
 html, body {
     min-height: 100%;
-    background-color: var(—text-color);
+    height: 100%;
+    /* min-height: 100vh; */
+    background-color: var(--body-color);
     color: rgba(0, 0, 0, 0.7);
 }
     
@@ -20,12 +23,13 @@ body {
 }
     
 :root {    
-    --main-color: #2196f3;
+    --head-color: #c8d9eb;
     --accent-color: #ff4081;
-    --text-color: #ffffff;
+    --body-color: #c2c3c5;
     --footer-color: #42a5f5;
+    --text-color: #635f5f;
     --search-input-height: 40px;
 }
 .shadow {
-box-shadow: 0 0.0625rem 0.125rem 0.0625rem #00000026;
+    box-shadow: 0 0.0625rem 0.125rem 0.0625rem #00000026;
 }
