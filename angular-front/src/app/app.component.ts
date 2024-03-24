@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { TopBarComponent } from './layout/top-bar/top-bar.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 
 @Component({
@@ -9,7 +10,8 @@ import { TopBarComponent } from './layout/top-bar/top-bar.component';
   standalone: true,
   imports: [CommonModule
     , RouterOutlet
-    , TopBarComponent],
+    , TopBarComponent
+    , FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
