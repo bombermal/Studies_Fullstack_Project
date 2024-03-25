@@ -20,7 +20,7 @@
 .content-holder {
   grid-area: content-holder;
   /* width: 100%; */
-  border: 1px solid var(--accent-color);
+  /* border: 1px solid var(--accent-color); */
 }
 
 .footer-holder {

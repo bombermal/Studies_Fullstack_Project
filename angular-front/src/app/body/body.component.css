@@ -2,5 +2,15 @@
     background-color: var(--base-color);
 
     min-height: 350px;
+    height: 100%
     
+}
+.sidenav-content {
+    background-color: var(--base-color);
+}
+.main-content {
+    padding: 20px;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    min-height: 350px;
 }
