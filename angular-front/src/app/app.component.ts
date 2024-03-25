@@ -5,8 +5,6 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { DashComponent } from './dash/dash.component';
-import { CardComponent } from './dash/card/card.component';
-import { TableChartComponent } from './dash/table-chart/table-chart.component';
 
 @Component({
   selector: 'app-root',
@@ -15,8 +13,6 @@ import { TableChartComponent } from './dash/table-chart/table-chart.component';
     , HeaderComponent
     , BodyComponent
     , DashComponent
-  , CardComponent
-  , TableChartComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

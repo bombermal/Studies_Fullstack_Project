@@ -1,9 +1,13 @@
 .top-card{
   height: 100%;
-
 }
 .table-container {
   height: 400px;
   overflow: auto;
   width: 100%;
+}
+
+.bottom-card{
+  margin-top: 20px;
+  height: 350px;
 }

@@ -12,7 +12,6 @@ import { BaseChartDirective } from 'ng2-charts';
 // Components
 import { DashComponent } from '../dash/dash.component';
 
-
 @Component({
   selector: 'app-body',
   standalone: true,
@@ -39,24 +38,7 @@ export class BodyComponent {
     this.sidenavOpened = !this.sidenavOpened;
   }
 
-  displayedColumns: string[] = ['date', 'id', 'account_id', 'type', 'ammount', 'status'];
-  dataSource = ELEMENT_DATA;
+
 }
 
-export interface InfoTransactions {
-  id: number;
-  account_id: number;
-  type: string;
-  status: string;
-  date: string;
-  ammount: number;
-  
-}
-
-const ELEMENT_DATA: InfoTransactions[] = [
-  {id: 1.0, account_id: 1.0, type: "Credit", date: "23/44/44", status: "Approved", ammount: 1.50}
-  // , {id: 1.0, account_id: 1.0, type: "Credit", date: "23/44/44", status: "Approved", ammount: 1.50}
-  // , {id: 1.0, account_id: 1.0, type: "Credit", date: "23/44/44", status: "Approved", ammount: 1.50}
-  // , {id: 1.0, account_id: 1.0, type: "Credit", date: "23/44/44", status: "Approved", ammount: 1.50}
-];
 
