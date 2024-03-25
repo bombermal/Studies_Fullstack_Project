@@ -14,3 +14,23 @@
     color: var(--text-color);
     min-height: 350px;
 }
+.balance-col {
+    background-color: var(--container-color);
+    color: var(--text-color);
+}
+/* 
+.chart-col{
+    min-height: 350px;
+} */
+.dash-top{
+    width: 100%;
+
+    display: flex;
+    gap: 16px;
+}
+.dash-title{
+    font-size: 1.5rem;
+}
+.dash-buttons{
+    margin-left: auto;
+}
