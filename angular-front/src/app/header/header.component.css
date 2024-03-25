@@ -9,7 +9,7 @@
     align-items: center;
 
     border-bottom: 3px solid var(--text-color);
-    background-color: var(--base-color);
+    background-color: var(--menu-color);
 }
 .logo-brand {
     height: 100%;

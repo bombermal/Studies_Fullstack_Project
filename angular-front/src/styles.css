@@ -15,10 +15,10 @@ body {
                 , sans-serif;
 }
 :root{
-    --container-color: #c2c3c5;
-    --base-color: #e2eaf1;
+    --menu-color: #aabcec98;
+    --base-color: #edf3f996;
     --text-color: #635f5e;
-    --accent-color: #b4163e;
+    --accent-color: #e406a1;
 
 }
 .link:hover {

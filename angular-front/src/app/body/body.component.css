@@ -2,20 +2,23 @@
     background-color: var(--base-color);
 
     min-height: 350px;
-    height: 100%
-    
+    height: 100%;
+
 }
 .sidenav-content {
-    background-color: var(--base-color);
+    background-color: var(--menu-color);
 }
 .main-content {
     padding: 20px;
     background-color: var(--base-color);
     color: var(--text-color);
     min-height: 350px;
+    height: 100%;
+
+    
 }
 .balance-col {
-    background-color: var(--container-color);
+    background-color: var(--menu-color);
     color: var(--text-color);
 }
 /* 

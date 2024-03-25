@@ -22,5 +22,5 @@ import { TableChartComponent } from './dash/table-chart/table-chart.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-front';
+  title = 'Simplebank';
 }
