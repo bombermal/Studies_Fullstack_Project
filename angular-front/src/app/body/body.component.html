@@ -1,0 +1,25 @@
+<mat-sidenav-container class="menu-container">
+        <mat-sidenav #sidenav mode="side"  [opened]="sidenavOpened" position="start">
+                <mat-nav-list>
+                    <mat-list-item>
+                        <button routerLink="" mat-button>
+                            <mat-icon>home</mat-icon> Home</button>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <button routerLink="card" mat-button>
+                            <mat-icon>dashboard</mat-icon> Dashboard</button>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <button routerLink="card" mat-button>
+                            <mat-icon>dashboard</mat-icon> Transactions Analisys</button>
+                    </mat-list-item>
+                </mat-nav-list>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <p>
+                    <label>Content:</label>
+            </p>
+        </mat-sidenav-content>
+        
+</mat-sidenav-container>
