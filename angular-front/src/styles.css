@@ -16,7 +16,7 @@ body {
 }
 :root{
     --container-color: #c2c3c5;
-    --base-color: #dfe8f0;
+    --base-color: #e2eaf1;
     --text-color: #635f5e;
     --accent-color: #b4163e;
 
@@ -27,3 +27,5 @@ body {
 .shadow {
     box-shadow: 0 0.0625rem 0.125rem 0.0625rem #00000026;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

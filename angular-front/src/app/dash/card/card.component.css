@@ -1,16 +1,9 @@
-.more-button {
+/* .more-button {
     position: absolute;
     top: 5px;
     right: 10px;
  }
  
- .dashboard-card {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
- }
  
  
  .dashboard-card-content {
@@ -27,4 +20,28 @@
  mat-card {
     display: flex;
     flex-direction: column;
- }
+ } */
+
+ .line-chart {
+   /* position: relative;
+   top: 15px;
+   left: 15px;
+   right: 15px;
+   bottom: 15px; */
+   /* width: 900px;
+   height: 500px; */
+
+   /* border: var(--accent-color) 1px solid; */
+}
+
+.line-chart-content {
+   /* position: relative;
+   top: 15px;
+   left: 15px;
+   right: 15px;
+   bottom: 15px; */
+   width: 880px;
+   height: 300px;
+
+   /* border: var(--accent-color) 1px solid; */
+}
