@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-html, body {
+html,
+body {
+    min-height: 100%;
     height: 100%;
     min-height: 100vh;
-    background-color: var(--base-color);
+    background-color: var(--body-color);
     /* color: rgba(0, 0, 0, 0.7); */
 }
 
@@ -25,5 +27,5 @@ body {
 .shadow {
     box-shadow: 0 0.0625rem 0.125rem 0.0625rem #00000026;
 }
-/* html, body { height: 100%; } */
-/* body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
