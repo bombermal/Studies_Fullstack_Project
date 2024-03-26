@@ -36,6 +36,8 @@
 }
 .dash-buttons{
     margin-left: auto;
+    display: flex;
+    /* flex: wrap; */
 }
 .labelBeforeSlide {
     vertical-align: top;

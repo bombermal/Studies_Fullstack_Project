@@ -27,11 +27,8 @@
                 </h1>
             </div>
             <div class="dash-buttons">
-                <mat-tab-group>
-                 <!--   @for( tab of tiles; track tab) {
-                        <mat-tab label={{tab}}></mat-tab>
-                    }    -->
-                    
+                <mat-tab-group *ngFor="let tab of tiles">
+                    <mat-tab label={{tab}}></mat-tab>
                 </mat-tab-group>
             </div>
         </div>
