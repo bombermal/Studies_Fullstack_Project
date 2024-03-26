@@ -60,13 +60,13 @@ docker compose up -d
 ```bash
 sudo apt install apache2
 ```
-3. Install [PHP](https://php.watch/articles/php-8.3-install-upgrade-on-debian-ubuntu#php83-ubuntu-quick)
+3. Install [PHP](https://techvblogs.com/blog/install-php-8-2-ubuntu-22-04)
 4. Install [nodejs and npm](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04)
 5. Install [Composer](https://getcomposer.org/download/)
 6. Install [Symfony](https://symfony.com/download)
 7. Start a new project
 ```bash
-symfony new symfony --version=7.* --webapp --docker 
+symfony new symfony --version=6.* --webapp --docker 
 ```
 
 ### 2.4 - Frontend
