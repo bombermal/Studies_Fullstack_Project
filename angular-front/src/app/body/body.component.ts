@@ -9,7 +9,7 @@ import { DataService } from '../service/data.service';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent implements OnInit {
-  public tiles: string[] = ['View All', 'Open', 'Processing', 'Finalized'];
+  public tiles: string[] = ['View All'].concat(['Open', 'Processing', 'Finalized']);
   // public tiles: any[] = [];
   sidenavOpened = true;
   

@@ -1,29 +1,28 @@
-table {
+.top-card{
+  height: 50%;
+}
+.table-container {
+  height: 100%;
+  overflow: auto;
   width: 100%;
 }
 
-tr.example-detail-row {
-  height: 0;
+.bottom-card{
+  margin-top: 20px;
+  height: 400px;
 }
 
-tr.example-element-row:not(.example-expanded-row):hover {
-  background: whitesmoke;
-}
-
-tr.example-element-row:not(.example-expanded-row):active {
-  background: #efefef;
-}
-
-.example-element-row td {
+/* Table Expand */
+.element-row td {
   border-bottom-width: 0;
 }
 
-.example-element-detail {
+.element-detail {
   overflow: hidden;
   display: flex;
 }
 
-.example-element-diagram {
+.element-diagram {
   min-width: 80px;
   border: 2px solid black;
   padding: 8px;
@@ -32,16 +31,27 @@ tr.example-element-row:not(.example-expanded-row):active {
   height: 104px;
 }
 
-.example-element-symbol {
+.element-symbol {
   font-weight: bold;
   font-size: 40px;
   line-height: normal;
 }
 
-.example-element-description {
+.element-description {
   padding: 16px;
 }
-
-.example-element-description-attribution {
+.element-description-attribution {
   opacity: 0.5;
+}
+
+tr.detail-row {
+  height: 0;
+}
+
+tr.element-row:not(.expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.element-row:not(.expanded-row):active {
+  background: #efefef;
 }

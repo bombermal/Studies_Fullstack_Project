@@ -15,3 +15,8 @@
 .app-holder{
     height: 100%;
 }
+
+.footer-holder{
+    height: 3%;
+    /* border-color: var(--accent-color) 3px solid; */
+}
