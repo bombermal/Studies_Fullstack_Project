@@ -1,6 +1,13 @@
 <mat-sidenav-container class="menu-container">
+    
     <mat-sidenav #sidenav mode="side" [opened]="sidenavOpened" class="sidenav-content">
-        <mat-nav-list>
+        <mat-nav-list class="nav-list">
+            <mat-list-item class="label-item">
+                <label class="labelBeforeSlide">DD/MM/YYYY</label>
+                <mat-slide-toggle #toggle>
+                    <label class="labelAfterSlide">YYYY/MM/DD</label>
+                </mat-slide-toggle>
+            </mat-list-item>
             <mat-list-item>
                 <button routerLink="" mat-button>
                     <mat-icon>home</mat-icon> Home</button>
@@ -13,6 +20,7 @@
                 <button routerLink="card" mat-button>
                     <mat-icon>bar_chart</mat-icon> Transactions Analisys</button>
             </mat-list-item>
+
         </mat-nav-list>
     </mat-sidenav>
 

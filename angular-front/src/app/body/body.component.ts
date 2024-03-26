@@ -7,7 +7,7 @@ import { MatIcon } from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
 import {MatTabsModule} from '@angular/material/tabs';
-import { BaseChartDirective } from 'ng2-charts';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 // Components
 import { DashComponent } from '../dash/dash.component';
@@ -24,13 +24,13 @@ import { DashComponent } from '../dash/dash.component';
     , MatGridListModule
     , MatTableModule
     , MatTabsModule
-    , BaseChartDirective
+    , MatSlideToggleModule
     , DashComponent],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
 })
 export class BodyComponent {
-  tiles: string[] = ['View All', 'Credit', 'Debit'];
+  tiles: string[] = ['View All', 'Open', 'Processing', 'Finalized'];
 
   sidenavOpened = true;
 
