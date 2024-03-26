@@ -70,6 +70,9 @@ symfony new symfony --version=6.* --webapp --docker
 ```
 
 ### 2.4 - Frontend
+```bash
+sudo npm install -g @angular/cli@14.2.13
+```
 
 &vellip;
 
