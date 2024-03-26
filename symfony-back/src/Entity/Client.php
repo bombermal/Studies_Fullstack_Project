@@ -2,15 +2,15 @@
 
 namespace App\Entity;
 
-use ApiPlatform\Metadata\ApiResource;
-use ApiPlatform\Metadata\Get;
-use ApiPlatform\Metadata\GetCollection;
-use Symfony\Component\Serializer\Annotation\Groups;
-
 use App\Repository\ClientRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+//API
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: ClientRepository::class)]
 #[ApiResource(
@@ -40,14 +40,6 @@ class Client
     #[ORM\Column(length: 255)]
     #[Groups(['client:list', 'client:item'])]
     private ?string $email = null;
-
-    #[ORM\OneToMany(targetEntity: Account::class, mappedBy: 'client_id', orphanRemoval: true)]
-    private Collection $account_number;
-
-    public function __construct()
-    {
-        $this->account_number = new ArrayCollection();
-    }
 
     public function __toString(): string
     {
@@ -91,36 +83,6 @@ class Client
     public function setEmail(string $email): static
     {
         $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Account>
-     */
-    public function getAccountNumber(): Collection
-    {
-        return $this->account_number;
-    }
-
-    public function addAccountNumber(Account $accountNumber): static
-    {
-        if (!$this->account_number->contains($accountNumber)) {
-            $this->account_number->add($accountNumber);
-            $accountNumber->setClientId($this);
-        }
-
-        return $this;
-    }
-
-    public function removeAccountNumber(Account $accountNumber): static
-    {
-        if ($this->account_number->removeElement($accountNumber)) {
-            // set the owning side to null (unless already changed)
-            if ($accountNumber->getClientId() === $this) {
-                $accountNumber->setClientId(null);
-            }
-        }
 
         return $this;
     }
