@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // Service
-import { SidenavService } from '../sidenav.service';
+import { SidenavService } from '../service/sidenav.service';
 
 @Component({
   selector: 'app-body',
@@ -9,7 +9,7 @@ import { SidenavService } from '../sidenav.service';
 })
 export class BodyComponent implements OnInit {
   public tiles: string[] = ['View All', 'Open', 'Processing', 'Finalized'];
-  sidenavOpened = false;
+  sidenavOpened = true;
   
   constructor(private sidenavService: SidenavService) {}
 
