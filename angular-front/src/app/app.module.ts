@@ -15,18 +15,27 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
+import { Routes, RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { DashComponent } from './dash/dash.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { LayoutModule } from '@angular/cdk/layout';
+import { HistoricComponent } from './historic/historic.component';
+
+
+const routes: Routes = [
+  { path: '', component: DashComponent, pathMatch: 'full' },
+  { path: 'historic', component: HistoricComponent },
+  { path: '**', redirectTo: 'www.google.com', pathMatch: 'full' }
+];
 
 @NgModule({
   declarations: [
     AppComponent
-    , HeaderComponent, BodyComponent, DashComponent
+    , HeaderComponent, BodyComponent, DashComponent, HistoricComponent
   ],
   imports: [
     BrowserModule
@@ -48,6 +57,7 @@ import { LayoutModule } from '@angular/cdk/layout';
   , LayoutModule
   , CanvasJSAngularChartsModule
   , HttpClientModule
+  , RouterModule.forRoot(routes)
   ],
   providers: [], //provideCharts(withDefaultRegisterables())
   bootstrap: [AppComponent]

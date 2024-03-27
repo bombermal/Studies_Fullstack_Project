@@ -10,10 +10,10 @@
             </mat-list-item>
             <mat-list-item>
                 <button routerLink="/" mat-button>
-                    <mat-icon>dashboard</mat-icon> Dashboard</button>
+                    <mat-icon [routerLink]="['']">dashboard</mat-icon> Dashboard</button>
             </mat-list-item>
             <mat-list-item>
-                <button routerLink="www.google.com" mat-button>
+                <button [routerLink]="['/historic']"mat-button>
                     <mat-icon>bar_chart</mat-icon> Transactions Analisys</button>
             </mat-list-item>
 
