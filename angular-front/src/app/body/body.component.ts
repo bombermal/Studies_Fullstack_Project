@@ -10,9 +10,10 @@ import { DataService } from '../service/data.service';
 })
 export class BodyComponent implements OnInit {
   public tiles: string[] = ['View All'].concat(['Open', 'Processing', 'Finalized']);
-  // public tiles: any[] = [];
   sidenavOpened = true;
-  
+  isChecked: boolean = false;
+  dateFormat: string = 'en-CA'
+
   constructor(private sidenavService: SidenavService
     , private dataService: DataService) {}
 
@@ -20,18 +21,10 @@ export class BodyComponent implements OnInit {
     this.sidenavService.toggleSidenav$.subscribe(() => {
       this.sidenavOpened = !this.sidenavOpened;
     });
+  }
 
-    // this.dataService.getTiles().subscribe(
-    //   (data: any[]) => {
-    //     // this.tiles = data;
-    //     // Print on console
-    //     console.log('Data:', data);
-    //   },
-    //   (error) => {
-    //     console.error('Error fetching data:', error);
-    //   }
-    // );
-
+  onToggleChange() {
+    this.sidenavService.toggleFormat();
   }
 
 }

@@ -7,9 +7,33 @@
         <span class="brand-name link">Simplebank</span>
     </div>
     <div class="user-group">
-        <span>Name</span>
-        <button mat-icon-button>
+        <span>{{user_name}}</span><br>
+        <mat-icon>attach_money</mat-icon>
+        <span>{{user_balance}}</span>
+        <button mat-icon-button mat-button [matMenuTriggerFor]="menu">
             <mat-icon>account_circle</mat-icon>
         </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>               
+                <mat-form-field appearance="fill">
+                    <mat-label>Change client</mat-label>
+                    <mat-select [(value)]="user_name">
+                      <mat-option *ngFor="let client of clients" [value]="client.user_name">
+                        {{client.user_name}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </button>
+            <button mat-menu-item>
+                <mat-form-field appearance="fill">
+                    <mat-label>Change account</mat-label>
+                    <mat-select [(value)]="account_number">
+                      <mat-option *ngFor="let account of accounts" [value]="account.account_number">
+                        {{account.account_number}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </button>
+          </mat-menu>
     </div>
 </mat-toolbar>

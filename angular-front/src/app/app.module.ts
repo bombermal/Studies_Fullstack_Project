@@ -17,6 +17,9 @@ import { MatCardModule } from '@angular/material/card';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
+import {MatNativeDateModule} from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
@@ -58,8 +61,11 @@ const routes: Routes = [
   , CanvasJSAngularChartsModule
   , HttpClientModule
   , RouterModule.forRoot(routes)
+  , MatNativeDateModule
+  , MatFormFieldModule
+  , MatSelectModule
   ],
-  providers: [], //provideCharts(withDefaultRegisterables())
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
