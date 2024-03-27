@@ -1,0 +1,23 @@
+.layout{
+    position: absolute;
+    width: 100%;
+    /* min-height: 350px; */
+    height: 100%;
+
+    /* border-color: var(--accent-color); */
+}
+.content-holder{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* border-color: var(--accent-color) 3px solid; */
+}
+.app-holder{
+    height: 100%;
+    
+}
+
+.footer-holder{
+    height: 3%;
+    /* border-color: var(--accent-color) 3px solid; */
+}

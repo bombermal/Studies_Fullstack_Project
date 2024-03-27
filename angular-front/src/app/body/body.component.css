@@ -1,0 +1,83 @@
+.menu-container {
+    background-color: var(--base-color);
+
+    min-height: 350px;
+    height: 100%;
+
+}
+
+.sidenav-content {
+    background-color: var(--menu-color);
+}
+
+.main-content {
+    padding: 20px;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    min-height: 350px;
+    height: 100%;
+    /* margin-bottom: 20px; */
+
+
+}
+
+.balance-col {
+    background-color: var(--menu-color);
+    color: var(--text-color);
+}
+
+/* 
+.chart-col{
+    min-height: 350px;
+} */
+.dash-top {
+    width: 100%;
+
+    display: flex;
+    gap: 16px;
+}
+
+.dash-title {
+    font-size: 1.5rem;
+}
+
+.dash-buttons {
+    margin-left: auto;
+    display: flex;
+    font-style: italic;
+    /* flex: wrap; */
+}
+
+.labelBeforeSlide {
+    vertical-align: top;
+    line-height: 24px;
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.labelAfterSlide {
+
+    color: var(--text-color);
+}
+
+::ng-deep .mat-slide-toggle:not(.mat-checked) .mat-slide-toggle-thumb {
+    background-color: #f44336;
+    /* Change the color to your desired color */
+}
+
+::ng-deep .mat-slide-toggle:not(.mat-checked) .mat-slide-toggle-bar {
+    background-color: #f44336;
+    /* Change the color to your desired color */
+}
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: #061fb3;
+    /* Change the color to your desired color */
+}
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: #061fb3;
+    /* Change the color to your desired color */
+}
