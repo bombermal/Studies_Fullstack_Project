@@ -2,48 +2,36 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
 use App\Repository\ClientRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-//API
-use ApiPlatform\Metadata\ApiResource;
-use ApiPlatform\Metadata\Get;
-use ApiPlatform\Metadata\GetCollection;
-use Symfony\Component\Serializer\Annotation\Groups;
 
+#[ApiResource]
 #[ORM\Entity(repositoryClass: ClientRepository::class)]
-#[ApiResource(
-    operations: [
-        new Get(normalizationContext: ['groups' => 'client:item']),
-        new GetCollection(normalizationContext: ['groups' => 'client:list'])
-    ],
-    order: ['name' => 'ASC'],
-    paginationEnabled: false,
-)]
 class Client
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups(['client:list', 'client:item'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['client:list', 'client:item'])]
     private ?string $name = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['client:list', 'client:item'])]
     private ?string $last_name = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['client:list', 'client:item'])]
     private ?string $email = null;
 
-    public function __toString(): string
+    #[ORM\OneToMany(targetEntity: Account::class, mappedBy: 'client', orphanRemoval: true)]
+    private Collection $accounts;
+
+    public function __construct()
     {
-        return $this->id . ' - ' . $this->name . ' ' . $this->last_name;
+        $this->accounts = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -83,6 +71,36 @@ class Client
     public function setEmail(string $email): static
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Account>
+     */
+    public function getAccounts(): Collection
+    {
+        return $this->accounts;
+    }
+
+    public function addAccount(Account $account): static
+    {
+        if (!$this->accounts->contains($account)) {
+            $this->accounts->add($account);
+            $account->setClient($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAccount(Account $account): static
+    {
+        if ($this->accounts->removeElement($account)) {
+            // set the owning side to null (unless already changed)
+            if ($account->getClient() === $this) {
+                $account->setClient(null);
+            }
+        }
 
         return $this;
     }

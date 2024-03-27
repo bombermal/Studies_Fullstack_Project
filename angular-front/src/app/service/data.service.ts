@@ -6,11 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  private apiUrl = '192.168.1.64:8000/api/clients'; // Replace with your API endpoint
+  apiUrl = '192.168.1.64:8000/api/clients'; 
+  constructor(private http: HttpClient) {}
 
-  // constructor(private http: HttpClient) {}
-
-  // getTiles(): Observable<any[]> {
-  //   return this.http.get<any[]>(this.apiUrl);
-  // }
+  getTiles(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
+  }
 }

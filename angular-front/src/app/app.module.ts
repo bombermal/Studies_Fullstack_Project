@@ -15,6 +15,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
@@ -46,6 +47,7 @@ import { LayoutModule } from '@angular/cdk/layout';
   , MatMenuModule
   , LayoutModule
   , CanvasJSAngularChartsModule
+  , HttpClientModule
   ],
   providers: [], //provideCharts(withDefaultRegisterables())
   bootstrap: [AppComponent]
